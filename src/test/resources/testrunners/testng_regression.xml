@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Shop Cart Test automtion regression suite"
-	thread-count="3" parallel="tests" verbose="3">
+	thread-count="4" parallel="tests" verbose="3">
 
 	<listeners>
 		<listener
@@ -13,33 +13,34 @@
 			class-name="com.qa.opencart.testlisteners.TesultsListener" />
 	</listeners>
 
-	<test name="Login page Test_FF_80">
+	<test name="Login page Test_firefox">
 		<parameter name="browser" value="firefox" />
-		<parameter name="version" value="80" />
+		<parameter name="version" value="86" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
 	</test>
 
-	<test name="Login page Test_chrome_85">
+	<test name="Login page Test_chrome">
 		<parameter name="browser" value="chrome" />
-		<parameter name="version" value="85" />
+		<parameter name="version" value="88" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
 	</test>
 
-	<test name="Login page Test_chrome_64">
-		<parameter name="browser" value="chrome" />
-		<parameter name="version" value="64" />
-		<classes>
-			<class name="com.qa.opencart.tests.LoginPageTest" />
-		</classes>
-	</test>
-
-	<test name="Accounts page Test_firefox_83">
+	<test name="Accounts page Test_firefox">
 		<parameter name="browser" value="firefox" />
-		<parameter name="version" value="83" />
+		<parameter name="version" value="86" />
+		<classes>
+			<class name="com.qa.opencart.tests.AccountsPageTest" />
+		</classes>
+
+	</test>
+
+	<test name="Accounts page Test_chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="version" value="88" />
 		<classes>
 			<class name="com.qa.opencart.tests.AccountsPageTest" />
 		</classes>
